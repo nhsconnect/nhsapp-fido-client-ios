@@ -1,0 +1,22 @@
+# User-specific stuff:
+.idea/
+.user/
+.gradle/
+.vscode/
+.DS_Store
+audit.txt
+web.DotSettings.user
+
+# Chromedriver#
+######################
+chromedriver_win32/
+chromedriver
+
+bddtests/target/site/
+
+# user settings file
+*.DotSettings.user
+
+FidoClient/FidoClient\.xcodeproj/*
+
+FidoClient/FidoClient/Configurations/
