@@ -1,0 +1,5 @@
+enum MatcherProtection: Int {
+    case MATCHER_PROTECTION_SOFTWARE = 0x0001
+    case MATCHER_PROTECTION_TEE = 0x0002
+    case MATCHER_PROTECTION_ON_CHIP = 0x0004
+}
