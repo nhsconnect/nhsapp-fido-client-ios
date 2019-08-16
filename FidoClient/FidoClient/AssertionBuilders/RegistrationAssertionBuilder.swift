@@ -20,7 +20,7 @@ class RegistrationAssertionBuilder: FidoAssertionBuilder{
             buffer.append(contentsOf: EncodingHelper.encodeInt(value.count))
             buffer.append(contentsOf: value)
             
-            value = ExtensionAssertionBuilder().getExtensionData()
+            try value = ExtensionAssertionBuilder().getExtensionData()
             buffer.append(contentsOf: EncodingHelper.encodeInt(TagsEnum.TAG_EXTENSION.rawValue))
             buffer.append(contentsOf: EncodingHelper.encodeInt(value.count))
             buffer.append(contentsOf: value)

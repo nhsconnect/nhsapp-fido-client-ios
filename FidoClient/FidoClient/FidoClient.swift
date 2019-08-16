@@ -7,7 +7,6 @@ public protocol FidoClientProtocol {
     func startAuthorisation(aaid: String, BiometricsAssertionScheme: String, privateKeyLabel: String,authenticationUrl: String) throws -> String
     func completeAuthorisation(aaid: String, BiometricsAssertionScheme: String, privateKeyLabel:String, authenticationUrl: String, completion: @escaping (_: FidoResponse ) throws -> ()) throws
     func doDeregistration(aaid: String, privateKeyLabel: String, deregistrationRequestEndpoint: String) throws
-    func getBiometricAvailability() throws -> BiometricState
 }
 
 @available(iOS 10.0, *)
@@ -16,8 +15,8 @@ public class FidoClient: FidoClientProtocol {
     private let requestHandler: FidoRequestHandler
     let bundleID = "ios:bundle-id:"
     
-    init(requestHandler: FidoRequestHandler = FidoRequestHandler()) {
-        self.requestHandler = requestHandler
+    public init() {
+        self.requestHandler = FidoRequestHandler()
     }
     
     public func register(aaid: String, BiometricsAssertionScheme: String, accessToken: String, registrationUrl: String, privateKeyLabel: String, registrationResponseEndpoint: String) throws -> Bool {
@@ -107,7 +106,6 @@ public class FidoClient: FidoClientProtocol {
         do {
             let keyId = try UserDefaultsManager.getKeyID()
             UserDefaultsManager.deleteKeyID()
-            UserDefaultsManager.setBiometricState(nil)
             let deregistrationRequest = try requestHandler.generateDeRegisterRequest(aaid: aaid, privateKeyLabel: privateKeyLabel, keyId: keyId, facetId: getFacetID())
             let encodedRequest = try encodingHandler.encodeDeregistrationRequest(deregistrationRequest)
             if !encodedRequest.isEmpty{
@@ -130,10 +128,6 @@ public class FidoClient: FidoClientProtocol {
             return bundleID + facetID
         }
         throw FidoError.genericError
-    }
-    
-    public func getBiometricAvailability() throws -> BiometricState {
-        return UserDefaultsManager.getBiometricAvailability()
     }
 }
 

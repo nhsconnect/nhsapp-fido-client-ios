@@ -32,7 +32,7 @@ class EncodingHelper {
     static func sha256(data : Data) -> [UInt8] {
         var hash = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
         data.withUnsafeBytes {
-            _ = CC_SHA256($0, CC_LONG(data.count), &hash)
+            _ = CC_SHA256($0.bindMemory(to: UInt8.self).baseAddress!, CC_LONG(data.count), &hash)
         }
         return hash
     }
