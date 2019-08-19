@@ -52,14 +52,22 @@ class AssertionTests: XCTestCase {
         XCTAssert([0,0,1,0,0,0,1,0] == counters)
     }
     
-    func test_getUVMData(){
-        let uvmData = MockAssertionBuilder().getUVMData()
+    func test_getUVMData() throws {
+        do {
+        let uvmData = try MockAssertionBuilder().getUVMData()
         XCTAssert([1,0,0,0,10,0,4,0] == uvmData)
+        } catch let error as FidoError {
+            throw error
+        }
     }
     
-    func test_getExtensions(){
-        let extensions = MockAssertionBuilder().getExtensionData()
+    func test_getExtensions() throws {
+        do {
+        let extensions = try MockAssertionBuilder().getExtensionData()
         XCTAssert([19,46,12,0,102,105,100,111,46,117,97,102,46,117,118,109,20,46,8,0,1,0,0,0,10,0,4,0] == extensions)
+        } catch let error as FidoError {
+            throw error
+        }
     }
     
     func test_encodeInt(){

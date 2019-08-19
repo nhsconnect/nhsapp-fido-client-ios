@@ -17,6 +17,6 @@ bddtests/target/site/
 # user settings file
 *.DotSettings.user
 
-FidoClient/FidoClient\.xcodeproj/*
+FidoClient/FidoClient.xcodeproj/xcuserdata/*
 
 FidoClient/FidoClient/Configurations/

@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A5C080D22FC787D00624B9C /* FidoRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C07FE22FC787D00624B9C /* FidoRequestHandler.swift */; };
+		8A5C080E22FC787D00624B9C /* FidoKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C07FF22FC787D00624B9C /* FidoKeyManager.swift */; };
+		8A5C081022FC787D00624B9C /* EncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C080122FC787D00624B9C /* EncodingHelper.swift */; };
+		8A5C081122FC787D00624B9C /* FidoEncodingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C080222FC787D00624B9C /* FidoEncodingHandler.swift */; };
+		8A5C081222FC787D00624B9C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C080322FC787D00624B9C /* UserDefaultsManager.swift */; };
+		8A5C081422FC787D00624B9C /* FidoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C080522FC787D00624B9C /* FidoError.swift */; };
+		8A5C081922FC787D00624B9C /* FidoURLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C080A22FC787D00624B9C /* FidoURLSessionManager.swift */; };
+		8A5C081A22FC787D00624B9C /* FidoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C080B22FC787D00624B9C /* FidoClient.swift */; };
+		8A5C082122FC788B00624B9C /* FidoClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C081C22FC788B00624B9C /* FidoClientTests.swift */; };
+		8A5C082222FC788B00624B9C /* ModelsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C081D22FC788B00624B9C /* ModelsTest.swift */; };
+		8A5C082322FC788B00624B9C /* AssertionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C081E22FC788B00624B9C /* AssertionTests.swift */; };
+		8A5C082422FC788B00624B9C /* FidoRequestHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C081F22FC788B00624B9C /* FidoRequestHandlerTests.swift */; };
+		8A60CE4E22FD9C05006D5741 /* FidoClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5C080C22FC787D00624B9C /* FidoClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A60CE5122FD9D10006D5741 /* FidoClient.framework in Resources */ = {isa = PBXBuildFile; fileRef = 8A7D2C0822FC780E0005C330 /* FidoClient.framework */; };
+		8A7D2C1722FC780E0005C330 /* FidoClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D2C1622FC780E0005C330 /* FidoClientTests.swift */; };
+		8ABCB10722FD6EF6007F03E4 /* FidoAssertionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCB10322FD6EF6007F03E4 /* FidoAssertionBuilder.swift */; };
+		8ABCB10822FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCB10422FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift */; };
+		8ABCB10922FD6EF6007F03E4 /* ExtensionAssertationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCB10522FD6EF6007F03E4 /* ExtensionAssertationBuilder.swift */; };
+		8ABCB10A22FD6EF6007F03E4 /* AuthenticationAssertionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCB10622FD6EF6007F03E4 /* AuthenticationAssertionBuilder.swift */; };
+		E56B61659F22F7E990636CD5 /* BCryptSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6B9DEE46D0C186A84B23 /* BCryptSwift.swift */; };
+		E56B61C5BB61C7EAF2558D34 /* DeregisterAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6E4DE7C1C50CBDDF5E71 /* DeregisterAuthenticator.swift */; };
+		E56B62ABA04B192680A8189A /* AlgAndEncodingEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6FD500D6E2D887EC8A55 /* AlgAndEncodingEnum.swift */; };
+		E56B636F1EDD70BE4F3A89ED /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B66848B4099CC56025686 /* SwiftyJSON.swift */; };
+		E56B63906C7AB48E550F0AB6 /* Assertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6412A7FD9A0770A902F3 /* Assertion.swift */; };
+		E56B63AC043CD822FC0F831E /* Data_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6FB92E46F2A143FBDFD5 /* Data_Extensions.swift */; };
+		E56B652BD1603CC5B7D4A7C0 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B622408EE598D662E594A /* Operation.swift */; };
+		E56B6549A3CC3935196F6C50 /* OperationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B603BEEAFD74CDC7C1D37 /* OperationHeader.swift */; };
+		E56B6551882720F0ACDF5F5C /* TagsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6A5C420AFF82204328F3 /* TagsEnum.swift */; };
+		E56B68014A3E37F4E6FA07A8 /* DeregRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6B9BD0946C0FA5F5BFEC /* DeregRequest.swift */; };
+		E56B680AA970E8D78C3B001A /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6A66D025C75F699F4276 /* Version.swift */; };
+		E56B686A1E59231FC558A837 /* DisplayPNGCharacteristicsDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6F517FD19F369B77978C /* DisplayPNGCharacteristicsDescriptor.swift */; };
+		E56B69E32A37487912C4E773 /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B681F7F626A516C7E34F5 /* RegistrationRequest.swift */; };
+		E56B69E76885E23096773833 /* MatcherProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B649F2E36FDD5A9AD236A /* MatcherProtection.swift */; };
+		E56B6A13F9244C47F7998643 /* FidoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6F6835EC41A01891B2A5 /* FidoResponse.swift */; };
+		E56B6BDFEE7D8AFEB3B703FE /* FidoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6C3F896E34319D973554 /* FidoRequest.swift */; };
+		E56B6C04A0B714FED2BA0E55 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B679299B1B0584439BE63 /* Extension.swift */; };
+		E56B6CA2E33C15DCA2315161 /* KeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B69C3D3BBA11036A56C19 /* KeyPair.swift */; };
+		E56B6D4C325AADF1289B2D05 /* KeyProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B64297F800AF840FBE4A9 /* KeyProtection.swift */; };
+		E56B6D8FC46DDF910CBDCD9F /* FinalChallengeParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6D7C2B8173BC9AB4A75A /* FinalChallengeParams.swift */; };
+		E56B6E11D8676FE1EED982FC /* RGBPalletteEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B69E1FEF8DFCF196EC395 /* RGBPalletteEntry.swift */; };
+		E56B6ED7906ABE78E469D64F /* ChannelBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6DB3078C72E8A5319968 /* ChannelBindings.swift */; };
+		E56B6F2AB13D4845E7AE83ED /* UserVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B677C4B24DA03F6C595ED /* UserVerification.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A60CE4F22FD9D09006D5741 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A7D2BFF22FC780E0005C330 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A7D2C0722FC780E0005C330;
+			remoteInfo = FidoClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A5C07FE22FC787D00624B9C /* FidoRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoRequestHandler.swift; sourceTree = "<group>"; };
+		8A5C07FF22FC787D00624B9C /* FidoKeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoKeyManager.swift; sourceTree = "<group>"; };
+		8A5C080122FC787D00624B9C /* EncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodingHelper.swift; sourceTree = "<group>"; };
+		8A5C080222FC787D00624B9C /* FidoEncodingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoEncodingHandler.swift; sourceTree = "<group>"; };
+		8A5C080322FC787D00624B9C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		8A5C080522FC787D00624B9C /* FidoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoError.swift; sourceTree = "<group>"; };
+		8A5C080A22FC787D00624B9C /* FidoURLSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoURLSessionManager.swift; sourceTree = "<group>"; };
+		8A5C080B22FC787D00624B9C /* FidoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoClient.swift; sourceTree = "<group>"; };
+		8A5C080C22FC787D00624B9C /* FidoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FidoClient.h; sourceTree = "<group>"; };
+		8A5C081C22FC788B00624B9C /* FidoClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoClientTests.swift; sourceTree = "<group>"; };
+		8A5C081D22FC788B00624B9C /* ModelsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsTest.swift; sourceTree = "<group>"; };
+		8A5C081E22FC788B00624B9C /* AssertionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertionTests.swift; sourceTree = "<group>"; };
+		8A5C081F22FC788B00624B9C /* FidoRequestHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoRequestHandlerTests.swift; sourceTree = "<group>"; };
+		8A5C082022FC788B00624B9C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A7D2C0822FC780E0005C330 /* FidoClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FidoClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7D2C1122FC780E0005C330 /* FidoClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidoClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7D2C1622FC780E0005C330 /* FidoClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidoClientTests.swift; sourceTree = "<group>"; };
+		8ABCB10322FD6EF6007F03E4 /* FidoAssertionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FidoAssertionBuilder.swift; path = FidoClient/AssertionBuilders/FidoAssertionBuilder.swift; sourceTree = SOURCE_ROOT; };
+		8ABCB10422FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationAssertionBuilder.swift; path = FidoClient/AssertionBuilders/RegistrationAssertionBuilder.swift; sourceTree = SOURCE_ROOT; };
+		8ABCB10522FD6EF6007F03E4 /* ExtensionAssertationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionAssertationBuilder.swift; path = FidoClient/AssertionBuilders/ExtensionAssertationBuilder.swift; sourceTree = SOURCE_ROOT; };
+		8ABCB10622FD6EF6007F03E4 /* AuthenticationAssertionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationAssertionBuilder.swift; path = FidoClient/AssertionBuilders/AuthenticationAssertionBuilder.swift; sourceTree = SOURCE_ROOT; };
+		E56B603BEEAFD74CDC7C1D37 /* OperationHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationHeader.swift; sourceTree = "<group>"; };
+		E56B622408EE598D662E594A /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		E56B6412A7FD9A0770A902F3 /* Assertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assertion.swift; sourceTree = "<group>"; };
+		E56B64297F800AF840FBE4A9 /* KeyProtection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyProtection.swift; sourceTree = "<group>"; };
+		E56B649F2E36FDD5A9AD236A /* MatcherProtection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatcherProtection.swift; sourceTree = "<group>"; };
+		E56B66848B4099CC56025686 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E56B677C4B24DA03F6C595ED /* UserVerification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVerification.swift; sourceTree = "<group>"; };
+		E56B679299B1B0584439BE63 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E56B681F7F626A516C7E34F5 /* RegistrationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
+		E56B69C3D3BBA11036A56C19 /* KeyPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPair.swift; sourceTree = "<group>"; };
+		E56B69E1FEF8DFCF196EC395 /* RGBPalletteEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBPalletteEntry.swift; sourceTree = "<group>"; };
+		E56B6A5C420AFF82204328F3 /* TagsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsEnum.swift; sourceTree = "<group>"; };
+		E56B6A66D025C75F699F4276 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		E56B6B9BD0946C0FA5F5BFEC /* DeregRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeregRequest.swift; sourceTree = "<group>"; };
+		E56B6B9DEE46D0C186A84B23 /* BCryptSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCryptSwift.swift; sourceTree = "<group>"; };
+		E56B6C3F896E34319D973554 /* FidoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoRequest.swift; sourceTree = "<group>"; };
+		E56B6D7C2B8173BC9AB4A75A /* FinalChallengeParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalChallengeParams.swift; sourceTree = "<group>"; };
+		E56B6DB3078C72E8A5319968 /* ChannelBindings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelBindings.swift; sourceTree = "<group>"; };
+		E56B6E4DE7C1C50CBDDF5E71 /* DeregisterAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeregisterAuthenticator.swift; sourceTree = "<group>"; };
+		E56B6F4A24901135F418FB26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		E56B6F517FD19F369B77978C /* DisplayPNGCharacteristicsDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPNGCharacteristicsDescriptor.swift; sourceTree = "<group>"; };
+		E56B6F6835EC41A01891B2A5 /* FidoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoResponse.swift; sourceTree = "<group>"; };
+		E56B6FB92E46F2A143FBDFD5 /* Data_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_Extensions.swift; sourceTree = "<group>"; };
+		E56B6FD500D6E2D887EC8A55 /* AlgAndEncodingEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgAndEncodingEnum.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A7D2C0522FC780E0005C330 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7D2C0E22FC780E0005C330 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A7D2BFE22FC780E0005C330 = {
+			isa = PBXGroup;
+			children = (
+				8A7D2C0A22FC780E0005C330 /* FidoClient */,
+				8A7D2C1522FC780E0005C330 /* FidoClientTests */,
+				8A7D2C0922FC780E0005C330 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A7D2C0922FC780E0005C330 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A7D2C0822FC780E0005C330 /* FidoClient.framework */,
+				8A7D2C1122FC780E0005C330 /* FidoClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A7D2C0A22FC780E0005C330 /* FidoClient */ = {
+			isa = PBXGroup;
+			children = (
+				8ABCB10222FD6EC9007F03E4 /* AssertionBuilders */,
+				8A5C080122FC787D00624B9C /* EncodingHelper.swift */,
+				8A5C080C22FC787D00624B9C /* FidoClient.h */,
+				8A5C080B22FC787D00624B9C /* FidoClient.swift */,
+				8A5C080222FC787D00624B9C /* FidoEncodingHandler.swift */,
+				8A5C080522FC787D00624B9C /* FidoError.swift */,
+				8A5C07FF22FC787D00624B9C /* FidoKeyManager.swift */,
+				8A5C07FE22FC787D00624B9C /* FidoRequestHandler.swift */,
+				8A5C080A22FC787D00624B9C /* FidoURLSessionManager.swift */,
+				8A5C080322FC787D00624B9C /* UserDefaultsManager.swift */,
+				E56B633E9B2D01C3CA9E9E55 /* Constants */,
+				E56B61968D405B79243DE412 /* Extension */,
+				E56B68CB7DFC09C72E38D613 /* Framework */,
+				E56B6322446B1E3CAAADCBAA /* Models */,
+				E56B6F4A24901135F418FB26 /* Info.plist */,
+			);
+			path = FidoClient;
+			sourceTree = "<group>";
+		};
+		8A7D2C1522FC780E0005C330 /* FidoClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A5C081E22FC788B00624B9C /* AssertionTests.swift */,
+				8A5C081C22FC788B00624B9C /* FidoClientTests.swift */,
+				8A5C081F22FC788B00624B9C /* FidoRequestHandlerTests.swift */,
+				8A5C082022FC788B00624B9C /* Info.plist */,
+				8A5C081D22FC788B00624B9C /* ModelsTest.swift */,
+				8A7D2C1622FC780E0005C330 /* FidoClientTests.swift */,
+			);
+			path = FidoClientTests;
+			sourceTree = "<group>";
+		};
+		8ABCB10222FD6EC9007F03E4 /* AssertionBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				8ABCB10622FD6EF6007F03E4 /* AuthenticationAssertionBuilder.swift */,
+				8ABCB10522FD6EF6007F03E4 /* ExtensionAssertationBuilder.swift */,
+				8ABCB10322FD6EF6007F03E4 /* FidoAssertionBuilder.swift */,
+				8ABCB10422FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift */,
+			);
+			path = AssertionBuilders;
+			sourceTree = "<group>";
+		};
+		E56B61968D405B79243DE412 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E56B6FB92E46F2A143FBDFD5 /* Data_Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E56B6322446B1E3CAAADCBAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E56B6B9BD0946C0FA5F5BFEC /* DeregRequest.swift */,
+				E56B6F6835EC41A01891B2A5 /* FidoResponse.swift */,
+				E56B6A66D025C75F699F4276 /* Version.swift */,
+				E56B679299B1B0584439BE63 /* Extension.swift */,
+				E56B681F7F626A516C7E34F5 /* RegistrationRequest.swift */,
+				E56B6F517FD19F369B77978C /* DisplayPNGCharacteristicsDescriptor.swift */,
+				E56B69C3D3BBA11036A56C19 /* KeyPair.swift */,
+				E56B6412A7FD9A0770A902F3 /* Assertion.swift */,
+				E56B622408EE598D662E594A /* Operation.swift */,
+				E56B6DB3078C72E8A5319968 /* ChannelBindings.swift */,
+				E56B6C3F896E34319D973554 /* FidoRequest.swift */,
+				E56B69E1FEF8DFCF196EC395 /* RGBPalletteEntry.swift */,
+				E56B6E4DE7C1C50CBDDF5E71 /* DeregisterAuthenticator.swift */,
+				E56B6D7C2B8173BC9AB4A75A /* FinalChallengeParams.swift */,
+				E56B603BEEAFD74CDC7C1D37 /* OperationHeader.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E56B633E9B2D01C3CA9E9E55 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E56B6A5C420AFF82204328F3 /* TagsEnum.swift */,
+				E56B6FD500D6E2D887EC8A55 /* AlgAndEncodingEnum.swift */,
+				E56B677C4B24DA03F6C595ED /* UserVerification.swift */,
+				E56B64297F800AF840FBE4A9 /* KeyProtection.swift */,
+				E56B649F2E36FDD5A9AD236A /* MatcherProtection.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E56B68CB7DFC09C72E38D613 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				E56B6B9DEE46D0C186A84B23 /* BCryptSwift.swift */,
+				E56B66848B4099CC56025686 /* SwiftyJSON.swift */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8A7D2C0322FC780E0005C330 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A60CE4E22FD9C05006D5741 /* FidoClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8A7D2C0722FC780E0005C330 /* FidoClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7D2C1C22FC780E0005C330 /* Build configuration list for PBXNativeTarget "FidoClient" */;
+			buildPhases = (
+				8A7D2C0322FC780E0005C330 /* Headers */,
+				8A7D2C0422FC780E0005C330 /* Sources */,
+				8A7D2C0522FC780E0005C330 /* Frameworks */,
+				8A7D2C0622FC780E0005C330 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FidoClient;
+			productName = FidoClient;
+			productReference = 8A7D2C0822FC780E0005C330 /* FidoClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8A7D2C1022FC780E0005C330 /* FidoClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7D2C1F22FC780E0005C330 /* Build configuration list for PBXNativeTarget "FidoClientTests" */;
+			buildPhases = (
+				8A7D2C0D22FC780E0005C330 /* Sources */,
+				8A7D2C0E22FC780E0005C330 /* Frameworks */,
+				8A7D2C0F22FC780E0005C330 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A60CE5022FD9D09006D5741 /* PBXTargetDependency */,
+			);
+			name = FidoClientTests;
+			productName = FidoClientTests;
+			productReference = 8A7D2C1122FC780E0005C330 /* FidoClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A7D2BFF22FC780E0005C330 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = NHSOnline;
+				TargetAttributes = {
+					8A7D2C0722FC780E0005C330 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					8A7D2C1022FC780E0005C330 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8A7D2C0222FC780E0005C330 /* Build configuration list for PBXProject "FidoClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8A7D2BFE22FC780E0005C330;
+			productRefGroup = 8A7D2C0922FC780E0005C330 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A7D2C0722FC780E0005C330 /* FidoClient */,
+				8A7D2C1022FC780E0005C330 /* FidoClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A7D2C0622FC780E0005C330 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7D2C0F22FC780E0005C330 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A60CE5122FD9D10006D5741 /* FidoClient.framework in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A7D2C0422FC780E0005C330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5C081022FC787D00624B9C /* EncodingHelper.swift in Sources */,
+				8A5C081A22FC787D00624B9C /* FidoClient.swift in Sources */,
+				8A5C081122FC787D00624B9C /* FidoEncodingHandler.swift in Sources */,
+				8A5C081422FC787D00624B9C /* FidoError.swift in Sources */,
+				8A5C080E22FC787D00624B9C /* FidoKeyManager.swift in Sources */,
+				8A5C080D22FC787D00624B9C /* FidoRequestHandler.swift in Sources */,
+				8ABCB10722FD6EF6007F03E4 /* FidoAssertionBuilder.swift in Sources */,
+				8ABCB10822FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift in Sources */,
+				8ABCB10922FD6EF6007F03E4 /* ExtensionAssertationBuilder.swift in Sources */,
+				8A5C081922FC787D00624B9C /* FidoURLSessionManager.swift in Sources */,
+				8ABCB10A22FD6EF6007F03E4 /* AuthenticationAssertionBuilder.swift in Sources */,
+				8A5C081222FC787D00624B9C /* UserDefaultsManager.swift in Sources */,
+				E56B6551882720F0ACDF5F5C /* TagsEnum.swift in Sources */,
+				E56B62ABA04B192680A8189A /* AlgAndEncodingEnum.swift in Sources */,
+				E56B6F2AB13D4845E7AE83ED /* UserVerification.swift in Sources */,
+				E56B6D4C325AADF1289B2D05 /* KeyProtection.swift in Sources */,
+				E56B69E76885E23096773833 /* MatcherProtection.swift in Sources */,
+				E56B63AC043CD822FC0F831E /* Data_Extensions.swift in Sources */,
+				E56B61659F22F7E990636CD5 /* BCryptSwift.swift in Sources */,
+				E56B636F1EDD70BE4F3A89ED /* SwiftyJSON.swift in Sources */,
+				E56B68014A3E37F4E6FA07A8 /* DeregRequest.swift in Sources */,
+				E56B6A13F9244C47F7998643 /* FidoResponse.swift in Sources */,
+				E56B680AA970E8D78C3B001A /* Version.swift in Sources */,
+				E56B6C04A0B714FED2BA0E55 /* Extension.swift in Sources */,
+				E56B69E32A37487912C4E773 /* RegistrationRequest.swift in Sources */,
+				E56B686A1E59231FC558A837 /* DisplayPNGCharacteristicsDescriptor.swift in Sources */,
+				E56B6CA2E33C15DCA2315161 /* KeyPair.swift in Sources */,
+				E56B63906C7AB48E550F0AB6 /* Assertion.swift in Sources */,
+				E56B652BD1603CC5B7D4A7C0 /* Operation.swift in Sources */,
+				E56B6ED7906ABE78E469D64F /* ChannelBindings.swift in Sources */,
+				E56B6BDFEE7D8AFEB3B703FE /* FidoRequest.swift in Sources */,
+				E56B6E11D8676FE1EED982FC /* RGBPalletteEntry.swift in Sources */,
+				E56B61C5BB61C7EAF2558D34 /* DeregisterAuthenticator.swift in Sources */,
+				E56B6D8FC46DDF910CBDCD9F /* FinalChallengeParams.swift in Sources */,
+				E56B6549A3CC3935196F6C50 /* OperationHeader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7D2C0D22FC780E0005C330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5C082122FC788B00624B9C /* FidoClientTests.swift in Sources */,
+				8A7D2C1722FC780E0005C330 /* FidoClientTests.swift in Sources */,
+				8A5C082422FC788B00624B9C /* FidoRequestHandlerTests.swift in Sources */,
+				8A5C082322FC788B00624B9C /* AssertionTests.swift in Sources */,
+				8A5C082222FC788B00624B9C /* ModelsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A60CE5022FD9D09006D5741 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A7D2C0722FC780E0005C330 /* FidoClient */;
+			targetProxy = 8A60CE4F22FD9D09006D5741 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8A7D2C1A22FC780E0005C330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8A7D2C1B22FC780E0005C330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8A7D2C1D22FC780E0005C330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5Y58TN94AP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FidoClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NHSOnline.FidoClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A7D2C1E22FC780E0005C330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5Y58TN94AP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FidoClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NHSOnline.FidoClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A7D2C2022FC780E0005C330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Y58TN94AP;
+				INFOPLIST_FILE = FidoClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NHSOnline.FidoClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A7D2C2122FC780E0005C330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Y58TN94AP;
+				INFOPLIST_FILE = FidoClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NHSOnline.FidoClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A7D2C0222FC780E0005C330 /* Build configuration list for PBXProject "FidoClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7D2C1A22FC780E0005C330 /* Debug */,
+				8A7D2C1B22FC780E0005C330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7D2C1C22FC780E0005C330 /* Build configuration list for PBXNativeTarget "FidoClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7D2C1D22FC780E0005C330 /* Debug */,
+				8A7D2C1E22FC780E0005C330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7D2C1F22FC780E0005C330 /* Build configuration list for PBXNativeTarget "FidoClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7D2C2022FC780E0005C330 /* Debug */,
+				8A7D2C2122FC780E0005C330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A7D2BFF22FC780E0005C330 /* Project object */;
+}

@@ -1,4 +1,4 @@
-enum FidoError: Error {
+public enum FidoError: Error {
     case invalidBiometrics
     case genericError
     case parsingError
