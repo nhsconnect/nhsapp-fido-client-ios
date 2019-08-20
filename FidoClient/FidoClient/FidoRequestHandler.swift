@@ -104,24 +104,27 @@ class FidoRequestHandler {
     
     func clientSendRegistrationResponse(_ uafMessage: String, registrationResponseEndpoint: String) throws -> JSON {
         do {
-            return try sendResponse(uafMessage: uafMessage, endpoint: registrationResponseEndpoint)
+            return try sendResponse(uafMessage: uafMessage, endpoint: registrationResponseEndpoint, authToken: nil)
         } catch let error as FidoError {
             throw error
         }
     }
     
-    func clientSendDeRegistrationRequest(_ uafMessage: String, deregistrationRequestEndpoint: String) throws {
+    func clientSendDeRegistrationRequest(_ uafMessage: String, deregistrationRequestEndpoint: String, authToken: String) throws {
         do {
-            let fidoResponse = try sendResponse(uafMessage: uafMessage, endpoint: deregistrationRequestEndpoint)
+            let fidoResponse = try sendResponse(uafMessage: uafMessage, endpoint: deregistrationRequestEndpoint, authToken: authToken)
             NSLog("Deregistration response: \(fidoResponse)")
         } catch FidoError.parsingError {
             throw FidoError.parsingError
         }
     }
     
-    private func sendResponse(uafMessage: String, endpoint: String) throws -> JSON {
+    private func sendResponse(uafMessage: String, endpoint: String, authToken: String?) throws -> JSON {
         do {
-            let request: URLRequest = try generateRequest(uafMessage: uafMessage, endpoint: endpoint)
+            var request: URLRequest = try generateRequest(uafMessage: uafMessage, endpoint: endpoint)
+            if authToken != nil {
+                request.setValue(authToken, forHTTPHeaderField: "Authorization")
+            }
             
             return try FidoURLSessionManager.doRequest(with: request)
         } catch FidoError.parsingError {
