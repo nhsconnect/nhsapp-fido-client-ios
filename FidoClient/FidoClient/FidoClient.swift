@@ -6,7 +6,7 @@ public protocol FidoClientProtocol {
     func completeRegistration(_ encodedResponse: String, registrationResponseEndpoint: String) throws -> Bool
     func startAuthorisation(aaid: String, BiometricsAssertionScheme: String, privateKeyLabel: String,authenticationUrl: String) throws -> String
     func completeAuthorisation(aaid: String, BiometricsAssertionScheme: String, privateKeyLabel:String, authenticationUrl: String, completion: @escaping (_: FidoResponse ) throws -> ()) throws
-    func doDeregistration(aaid: String, privateKeyLabel: String, deregistrationRequestEndpoint: String) throws
+    func doDeregistration(aaid: String, privateKeyLabel: String, deregistrationRequestEndpoint: String, authToken: String) throws
 }
 
 @available(iOS 10.0, *)
@@ -102,14 +102,14 @@ public class FidoClient: FidoClientProtocol {
         }
     }
     
-    public func doDeregistration(aaid: String, privateKeyLabel: String, deregistrationRequestEndpoint: String) throws {
+    public func doDeregistration(aaid: String, privateKeyLabel: String, deregistrationRequestEndpoint: String, authToken: String) throws {
         do {
             let keyId = try UserDefaultsManager.getKeyID()
             UserDefaultsManager.deleteKeyID()
             let deregistrationRequest = try requestHandler.generateDeRegisterRequest(aaid: aaid, privateKeyLabel: privateKeyLabel, keyId: keyId, facetId: getFacetID())
             let encodedRequest = try encodingHandler.encodeDeregistrationRequest(deregistrationRequest)
             if !encodedRequest.isEmpty{
-                try requestHandler.clientSendDeRegistrationRequest(encodedRequest, deregistrationRequestEndpoint: deregistrationRequestEndpoint)
+                try requestHandler.clientSendDeRegistrationRequest(encodedRequest, deregistrationRequestEndpoint: deregistrationRequestEndpoint, authToken: authToken)
             }
         } catch let error as FidoError {
             throw error

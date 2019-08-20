@@ -63,13 +63,13 @@ class FidoClientTests: XCTestCase {
     }
     
     func test_getFaceId() {
-            var facetId: String = ""
-            do {
-                try facetId = fidoClient!.getFacetID()
-            } catch {
-                assertionFailure("Failed to create FidoRequest")
-                return
-            }
-            XCTAssert(facetId == "ios:bundle-id:com.apple.dt.xctest.tool")
+        var facetId: String = ""
+        do {
+            try facetId = fidoClient!.getFacetID()
+        } catch {
+            assertionFailure("Failed to create FidoRequest")
+            return
+        }
+        XCTAssert(facetId == "ios:bundle-id:com.apple.dt.xctest.tool")
     }
 }
