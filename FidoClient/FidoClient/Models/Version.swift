@@ -1,3 +1,5 @@
+import SwiftyJSON
+
 struct Version : Codable{
     public let major: Int
     public let minor: Int

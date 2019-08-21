@@ -1,5 +1,6 @@
 import Foundation
 import os.log
+import SwiftyJSON
 
 class FidoURLSessionManager {
     

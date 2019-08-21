@@ -1,3 +1,5 @@
+import SwiftyJSON
+
 class FidoRequest : Codable {
     var header: OperationHeader
     var challenge: String
