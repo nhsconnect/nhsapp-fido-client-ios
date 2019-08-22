@@ -2,6 +2,7 @@ import Foundation
 import LocalAuthentication
 import CommonCrypto
 import os.log
+import BCryptSwift
 
 class RegistrationAssertionBuilder: FidoAssertionBuilder{
     let keyID = "nhs-app-key-"

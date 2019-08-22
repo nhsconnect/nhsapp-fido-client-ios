@@ -1,6 +1,7 @@
 import Foundation
 import CommonCrypto
 import os.log
+import BCryptSwift
 
 class AuthenticationAssertionBuilder: FidoAssertionBuilder {
     let privateKey: SecKey

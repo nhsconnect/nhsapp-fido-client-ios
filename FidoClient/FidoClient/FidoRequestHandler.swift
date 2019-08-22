@@ -1,5 +1,6 @@
 import Foundation
 import os.log
+import SwiftyJSON
 
 @available(iOS 10.0, *)
 class FidoRequestHandler {

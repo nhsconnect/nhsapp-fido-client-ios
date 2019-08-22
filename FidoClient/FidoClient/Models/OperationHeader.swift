@@ -1,3 +1,5 @@
+import SwiftyJSON
+
 struct OperationHeader : Codable {
     public var upv: Version
     public var op: Operation

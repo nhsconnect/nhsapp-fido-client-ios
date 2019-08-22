@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2C62CE467A17562CF6DC44 /* Pods_FidoClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DAB91D96B8C7147D7544BA /* Pods_FidoClientTests.framework */; };
+		66101AD3352826342B3D5E4B /* Pods_FidoClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E49B1CF85D53E31620DE93C /* Pods_FidoClient.framework */; };
 		8A5C080D22FC787D00624B9C /* FidoRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C07FE22FC787D00624B9C /* FidoRequestHandler.swift */; };
 		8A5C080E22FC787D00624B9C /* FidoKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C07FF22FC787D00624B9C /* FidoKeyManager.swift */; };
 		8A5C081022FC787D00624B9C /* EncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C080122FC787D00624B9C /* EncodingHelper.swift */; };
@@ -25,10 +27,8 @@
 		8ABCB10822FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCB10422FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift */; };
 		8ABCB10922FD6EF6007F03E4 /* ExtensionAssertationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCB10522FD6EF6007F03E4 /* ExtensionAssertationBuilder.swift */; };
 		8ABCB10A22FD6EF6007F03E4 /* AuthenticationAssertionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCB10622FD6EF6007F03E4 /* AuthenticationAssertionBuilder.swift */; };
-		E56B61659F22F7E990636CD5 /* BCryptSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6B9DEE46D0C186A84B23 /* BCryptSwift.swift */; };
 		E56B61C5BB61C7EAF2558D34 /* DeregisterAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6E4DE7C1C50CBDDF5E71 /* DeregisterAuthenticator.swift */; };
 		E56B62ABA04B192680A8189A /* AlgAndEncodingEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6FD500D6E2D887EC8A55 /* AlgAndEncodingEnum.swift */; };
-		E56B636F1EDD70BE4F3A89ED /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B66848B4099CC56025686 /* SwiftyJSON.swift */; };
 		E56B63906C7AB48E550F0AB6 /* Assertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6412A7FD9A0770A902F3 /* Assertion.swift */; };
 		E56B63AC043CD822FC0F831E /* Data_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B6FB92E46F2A143FBDFD5 /* Data_Extensions.swift */; };
 		E56B652BD1603CC5B7D4A7C0 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B622408EE598D662E594A /* Operation.swift */; };
@@ -61,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F380B158E7494E65349401 /* Pods-FidoClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidoClientTests.release.xcconfig"; path = "Target Support Files/Pods-FidoClientTests/Pods-FidoClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		13F1DF4D99945743E53F0B08 /* Pods-FidoClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidoClient.release.xcconfig"; path = "Target Support Files/Pods-FidoClient/Pods-FidoClient.release.xcconfig"; sourceTree = "<group>"; };
+		1E49B1CF85D53E31620DE93C /* Pods_FidoClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FidoClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42DCD7DCE2638016E2D1E383 /* Pods-FidoClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidoClientTests.debug.xcconfig"; path = "Target Support Files/Pods-FidoClientTests/Pods-FidoClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A5C07FE22FC787D00624B9C /* FidoRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoRequestHandler.swift; sourceTree = "<group>"; };
 		8A5C07FF22FC787D00624B9C /* FidoKeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoKeyManager.swift; sourceTree = "<group>"; };
 		8A5C080122FC787D00624B9C /* EncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodingHelper.swift; sourceTree = "<group>"; };
@@ -81,12 +85,12 @@
 		8ABCB10422FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationAssertionBuilder.swift; path = FidoClient/AssertionBuilders/RegistrationAssertionBuilder.swift; sourceTree = SOURCE_ROOT; };
 		8ABCB10522FD6EF6007F03E4 /* ExtensionAssertationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionAssertationBuilder.swift; path = FidoClient/AssertionBuilders/ExtensionAssertationBuilder.swift; sourceTree = SOURCE_ROOT; };
 		8ABCB10622FD6EF6007F03E4 /* AuthenticationAssertionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationAssertionBuilder.swift; path = FidoClient/AssertionBuilders/AuthenticationAssertionBuilder.swift; sourceTree = SOURCE_ROOT; };
+		B1DAB91D96B8C7147D7544BA /* Pods_FidoClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FidoClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56B603BEEAFD74CDC7C1D37 /* OperationHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationHeader.swift; sourceTree = "<group>"; };
 		E56B622408EE598D662E594A /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		E56B6412A7FD9A0770A902F3 /* Assertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assertion.swift; sourceTree = "<group>"; };
 		E56B64297F800AF840FBE4A9 /* KeyProtection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyProtection.swift; sourceTree = "<group>"; };
 		E56B649F2E36FDD5A9AD236A /* MatcherProtection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatcherProtection.swift; sourceTree = "<group>"; };
-		E56B66848B4099CC56025686 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E56B677C4B24DA03F6C595ED /* UserVerification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVerification.swift; sourceTree = "<group>"; };
 		E56B679299B1B0584439BE63 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E56B681F7F626A516C7E34F5 /* RegistrationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
@@ -95,7 +99,6 @@
 		E56B6A5C420AFF82204328F3 /* TagsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsEnum.swift; sourceTree = "<group>"; };
 		E56B6A66D025C75F699F4276 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		E56B6B9BD0946C0FA5F5BFEC /* DeregRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeregRequest.swift; sourceTree = "<group>"; };
-		E56B6B9DEE46D0C186A84B23 /* BCryptSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCryptSwift.swift; sourceTree = "<group>"; };
 		E56B6C3F896E34319D973554 /* FidoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoRequest.swift; sourceTree = "<group>"; };
 		E56B6D7C2B8173BC9AB4A75A /* FinalChallengeParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalChallengeParams.swift; sourceTree = "<group>"; };
 		E56B6DB3078C72E8A5319968 /* ChannelBindings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelBindings.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 		E56B6F6835EC41A01891B2A5 /* FidoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoResponse.swift; sourceTree = "<group>"; };
 		E56B6FB92E46F2A143FBDFD5 /* Data_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_Extensions.swift; sourceTree = "<group>"; };
 		E56B6FD500D6E2D887EC8A55 /* AlgAndEncodingEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgAndEncodingEnum.swift; sourceTree = "<group>"; };
+		E9175C5DD40109995450BFB5 /* Pods-FidoClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FidoClient.debug.xcconfig"; path = "Target Support Files/Pods-FidoClient/Pods-FidoClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66101AD3352826342B3D5E4B /* Pods_FidoClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,18 +124,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2C62CE467A17562CF6DC44 /* Pods_FidoClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B927CD87704D3B31A7ED664 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9175C5DD40109995450BFB5 /* Pods-FidoClient.debug.xcconfig */,
+				13F1DF4D99945743E53F0B08 /* Pods-FidoClient.release.xcconfig */,
+				42DCD7DCE2638016E2D1E383 /* Pods-FidoClientTests.debug.xcconfig */,
+				03F380B158E7494E65349401 /* Pods-FidoClientTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8A7D2BFE22FC780E0005C330 = {
 			isa = PBXGroup;
 			children = (
 				8A7D2C0A22FC780E0005C330 /* FidoClient */,
 				8A7D2C1522FC780E0005C330 /* FidoClientTests */,
 				8A7D2C0922FC780E0005C330 /* Products */,
+				5B927CD87704D3B31A7ED664 /* Pods */,
+				BAEF913223E592DF00B1BCC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,7 +178,6 @@
 				8A5C080322FC787D00624B9C /* UserDefaultsManager.swift */,
 				E56B633E9B2D01C3CA9E9E55 /* Constants */,
 				E56B61968D405B79243DE412 /* Extension */,
-				E56B68CB7DFC09C72E38D613 /* Framework */,
 				E56B6322446B1E3CAAADCBAA /* Models */,
 				E56B6F4A24901135F418FB26 /* Info.plist */,
 			);
@@ -186,6 +205,15 @@
 				8ABCB10422FD6EF6007F03E4 /* RegistrationAssertionBuilder.swift */,
 			);
 			path = AssertionBuilders;
+			sourceTree = "<group>";
+		};
+		BAEF913223E592DF00B1BCC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E49B1CF85D53E31620DE93C /* Pods_FidoClient.framework */,
+				B1DAB91D96B8C7147D7544BA /* Pods_FidoClientTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E56B61968D405B79243DE412 /* Extension */ = {
@@ -230,15 +258,6 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		E56B68CB7DFC09C72E38D613 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				E56B6B9DEE46D0C186A84B23 /* BCryptSwift.swift */,
-				E56B66848B4099CC56025686 /* SwiftyJSON.swift */,
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -257,6 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A7D2C1C22FC780E0005C330 /* Build configuration list for PBXNativeTarget "FidoClient" */;
 			buildPhases = (
+				3CE59CE4C007CB9DED8E6591 /* [CP] Check Pods Manifest.lock */,
 				8A7D2C0322FC780E0005C330 /* Headers */,
 				8A7D2C0422FC780E0005C330 /* Sources */,
 				8A7D2C0522FC780E0005C330 /* Frameworks */,
@@ -275,6 +295,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A7D2C1F22FC780E0005C330 /* Build configuration list for PBXNativeTarget "FidoClientTests" */;
 			buildPhases = (
+				81ED7BBAA117297BFEABAA71 /* [CP] Check Pods Manifest.lock */,
 				8A7D2C0D22FC780E0005C330 /* Sources */,
 				8A7D2C0E22FC780E0005C330 /* Frameworks */,
 				8A7D2C0F22FC780E0005C330 /* Resources */,
@@ -344,6 +365,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CE59CE4C007CB9DED8E6591 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FidoClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81ED7BBAA117297BFEABAA71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FidoClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A7D2C0422FC780E0005C330 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -367,8 +435,6 @@
 				E56B6D4C325AADF1289B2D05 /* KeyProtection.swift in Sources */,
 				E56B69E76885E23096773833 /* MatcherProtection.swift in Sources */,
 				E56B63AC043CD822FC0F831E /* Data_Extensions.swift in Sources */,
-				E56B61659F22F7E990636CD5 /* BCryptSwift.swift in Sources */,
-				E56B636F1EDD70BE4F3A89ED /* SwiftyJSON.swift in Sources */,
 				E56B68014A3E37F4E6FA07A8 /* DeregRequest.swift in Sources */,
 				E56B6A13F9244C47F7998643 /* FidoResponse.swift in Sources */,
 				E56B680AA970E8D78C3B001A /* Version.swift in Sources */,
@@ -533,6 +599,7 @@
 		};
 		8A7D2C1D22FC780E0005C330 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9175C5DD40109995450BFB5 /* Pods-FidoClient.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -560,6 +627,7 @@
 		};
 		8A7D2C1E22FC780E0005C330 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13F1DF4D99945743E53F0B08 /* Pods-FidoClient.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -586,6 +654,7 @@
 		};
 		8A7D2C2022FC780E0005C330 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42DCD7DCE2638016E2D1E383 /* Pods-FidoClientTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,6 +674,7 @@
 		};
 		8A7D2C2122FC780E0005C330 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03F380B158E7494E65349401 /* Pods-FidoClientTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,3 +1,5 @@
+import SwiftyJSON
+
 class RegistrationRequest : FidoRequest {
     var username: String
     
