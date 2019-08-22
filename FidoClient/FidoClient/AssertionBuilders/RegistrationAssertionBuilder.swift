@@ -5,10 +5,11 @@ import os.log
 import BCryptSwift
 
 class RegistrationAssertionBuilder: FidoAssertionBuilder{
-    let keyID = "nhs-app-key-"
+    let keyIDPrefix: String
     let keyPair: KeyPair
-    init(keyPair: KeyPair) {
+    init(keyPair: KeyPair, keyIDPrefix: String) {
         self.keyPair = keyPair
+        self.keyIDPrefix = keyIDPrefix
     }
     
     @available(iOS 10.0, *)
@@ -105,7 +106,7 @@ class RegistrationAssertionBuilder: FidoAssertionBuilder{
             buffer.append(contentsOf: value)
             
             buffer.append(contentsOf: EncodingHelper.encodeInt(TagsEnum.TAG_PUB_KEY.rawValue))
-            value = try getPubKeyId()
+            value = try getPubKeyID()
             buffer.append(contentsOf: EncodingHelper.encodeInt(value.count))
             buffer.append(contentsOf: value)
             
@@ -116,7 +117,7 @@ class RegistrationAssertionBuilder: FidoAssertionBuilder{
     }
     
     @available(iOS 10.0, *)
-    func getPubKeyId() throws -> [UInt8] {
+    func getPubKeyID() throws -> [UInt8] {
         if let keyData = SecKeyCopyExternalRepresentation(keyPair.pubKey, nil) as Data?{
             return [UInt8](keyData)
         }
@@ -143,10 +144,10 @@ class RegistrationAssertionBuilder: FidoAssertionBuilder{
     func createKeyIDWith(_ salt: String) -> [UInt8] {
         let saltByteArray: [UInt8] = Array(salt.utf8)
         let data = NSData(bytes: saltByteArray, length: saltByteArray.count)
-        var keyId = keyID + data.base64EncodedDataRFC4648()
-        UserDefaultsManager.saveKeyID(keyId)
+        var keyID = keyIDPrefix + data.base64EncodedDataRFC4648()
+        UserDefaultsManager.saveKeyID(keyID)
         
-        return Array(keyId.utf8)
+        return Array(keyID.utf8)
     }
     
     func makeAssertionInfo() -> [UInt8] {

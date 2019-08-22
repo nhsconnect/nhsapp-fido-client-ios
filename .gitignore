@@ -20,3 +20,7 @@ bddtests/target/site/
 FidoClient/FidoClient.xcodeproj/xcuserdata/*
 
 FidoClient/FidoClient/Configurations/
+FidoClient/Podfile.lock
+FidoClient/Pods/*
+
+FidoClient/FidoClient.xcworkspace/xcuserdata

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "FidoClientIOS"
-  spec.version      = "0.1.0"
+  spec.version      = "1.0.0"
   spec.summary      = "This is the NHS digital Fido Client"
   spec.homepage     = "https://git.nhschoices.net/nhsonline/nhsonline-fido-client-ios"
   spec.license      = { :type => 'MIT', :text => <<-LICENSE
