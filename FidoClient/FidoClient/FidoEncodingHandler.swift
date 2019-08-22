@@ -6,10 +6,10 @@ class FidoEncodingHandler {
     let requestHandler = FidoRequestHandler()
 
     @available(iOS 10.0, *)
-    func getEncodedRegistrationResponse(aaid: String, BiometricsAssertionScheme: String, privateKeyLabel: String, with registrationRequest: RegistrationRequest) throws -> String {
+    func getEncodedRegistrationResponse(aaid: String, BiometricsAssertionScheme: String, privateKeyLabel: String, with registrationRequest: RegistrationRequest, keyIDPrefix: String) throws -> String {
         let response: FidoResponse
         do {
-            try response = requestHandler.getRegistrationResponse(aaid: aaid, BiometricsAssertionScheme: BiometricsAssertionScheme, privateKeyLabel: privateKeyLabel, with: registrationRequest)
+            try response = requestHandler.getRegistrationResponse(aaid: aaid, BiometricsAssertionScheme: BiometricsAssertionScheme, privateKeyLabel: privateKeyLabel, with: registrationRequest, keyIDPrefix: keyIDPrefix)
             let encodedResponse = try encodeResponse(response)
             return encodedResponse
         } catch let error as FidoError {

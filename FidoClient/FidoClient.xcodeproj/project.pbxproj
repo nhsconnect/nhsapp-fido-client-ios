@@ -20,7 +20,6 @@
 		8A5C082222FC788B00624B9C /* ModelsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C081D22FC788B00624B9C /* ModelsTest.swift */; };
 		8A5C082322FC788B00624B9C /* AssertionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C081E22FC788B00624B9C /* AssertionTests.swift */; };
 		8A5C082422FC788B00624B9C /* FidoRequestHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C081F22FC788B00624B9C /* FidoRequestHandlerTests.swift */; };
-		8A60CE4E22FD9C05006D5741 /* FidoClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5C080C22FC787D00624B9C /* FidoClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A60CE5122FD9D10006D5741 /* FidoClient.framework in Resources */ = {isa = PBXBuildFile; fileRef = 8A7D2C0822FC780E0005C330 /* FidoClient.framework */; };
 		8A6231C5230BF4FB008FF8B3 /* FidoClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C081C22FC788B00624B9C /* FidoClientTests.swift */; };
 		8ABCB10722FD6EF6007F03E4 /* FidoAssertionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCB10322FD6EF6007F03E4 /* FidoAssertionBuilder.swift */; };
@@ -73,7 +72,6 @@
 		8A5C080522FC787D00624B9C /* FidoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoError.swift; sourceTree = "<group>"; };
 		8A5C080A22FC787D00624B9C /* FidoURLSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoURLSessionManager.swift; sourceTree = "<group>"; };
 		8A5C080B22FC787D00624B9C /* FidoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoClient.swift; sourceTree = "<group>"; };
-		8A5C080C22FC787D00624B9C /* FidoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FidoClient.h; sourceTree = "<group>"; };
 		8A5C081C22FC788B00624B9C /* FidoClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FidoClientTests.swift; sourceTree = "<group>"; };
 		8A5C081D22FC788B00624B9C /* ModelsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsTest.swift; sourceTree = "<group>"; };
 		8A5C081E22FC788B00624B9C /* AssertionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertionTests.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			children = (
 				8ABCB10222FD6EC9007F03E4 /* AssertionBuilders */,
 				8A5C080122FC787D00624B9C /* EncodingHelper.swift */,
-				8A5C080C22FC787D00624B9C /* FidoClient.h */,
 				8A5C080B22FC787D00624B9C /* FidoClient.swift */,
 				8A5C080222FC787D00624B9C /* FidoEncodingHandler.swift */,
 				8A5C080522FC787D00624B9C /* FidoError.swift */,
@@ -265,7 +262,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A60CE4E22FD9C05006D5741 /* FidoClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

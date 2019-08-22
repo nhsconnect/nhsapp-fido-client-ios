@@ -32,12 +32,12 @@ class FidoRequestHandler {
         }
     }
     
-    func getRegistrationResponse(aaid: String, BiometricsAssertionScheme: String, privateKeyLabel:String, with registrationRequest: RegistrationRequest) throws -> FidoResponse {
+    func getRegistrationResponse(aaid: String, BiometricsAssertionScheme: String, privateKeyLabel:String, with registrationRequest: RegistrationRequest, keyIDPrefix: String) throws -> FidoResponse {
         var registrationResponse = FidoResponse()
         var keyPair: KeyPair
         do {
             try keyPair = keyManager.generateKeyPair(privateKeyLabel:privateKeyLabel)
-            let registrationAssertionBuilder: RegistrationAssertionBuilder = RegistrationAssertionBuilder(keyPair: keyPair)
+            let registrationAssertionBuilder: RegistrationAssertionBuilder = RegistrationAssertionBuilder(keyPair: keyPair, keyIDPrefix: keyIDPrefix)
             try registrationResponse = processRequest(BiometricsAssertionScheme: BiometricsAssertionScheme, request: registrationRequest, builder: registrationAssertionBuilder, aaid: aaid)
             return registrationResponse
         } catch let error as FidoError{
@@ -67,7 +67,6 @@ class FidoRequestHandler {
     }
     
     func generateRegistrationRequest(registrationUrl: String, accessToken: String) throws -> URLRequest {
-        //let registrationUrl: String = endpointHelper.requestRequestEndpoint
         do {
             var request = try generateRequest(registrationUrl)
             request.setValue(accessToken, forHTTPHeaderField: "Authorization")
