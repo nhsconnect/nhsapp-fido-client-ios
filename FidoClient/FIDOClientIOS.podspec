@@ -31,8 +31,10 @@ Pod::Spec.new do |spec|
   spec.author        = "NHS Digital"
   spec.platform      = :ios, "9.0"
   spec.source        = { :git => "https://git.nhschoices.net/nhsonline/nhsonline-fido-client-ios.git", :tag => "#{spec.version}" }
-  spec.source_files  = "FIDOClient/**/*.{h,swift}"
+  spec.source_files  = "FidoClient/**/*.swift"
   spec.exclude_files = ["FIDOClient/Exclude", "FIDOClient/FIDOClientTests/"]
   spec.swift_version = "5.0"
+  spec.dependency "BCryptSwift"
+  spec.dependency "SwiftyJSON", "~> 4.0"
 end
 
