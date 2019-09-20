@@ -1,23 +1,76 @@
-# nhsonline-fido-client-ios
+# FIDO UAF (Universal Authentication Framework) client for iOS
 
-> NHS Online FIDO client for IOS
+The FIDO UAF client is a CocoaPod to authenticate logging in to iOS apps without a password.
 
-## Get code
-Clone from the GitLab repo: https://git.nhschoices.net/nhsonline/nhsonline-fido-client-ios.git
+You can use the client to:
 
-```bash
-git clone https://git.nhschoices.net/nhsonline/nhsonline-fido-client-ios.git 
+* register and deregister biometric details for Touch ID and Face ID
+* authorise against registered biometric details
+
+We'll add the client to the public [CocoaPods dependency manager](https://github.com/CocoaPods/CocoaPods) soon.
+
+## Requirements
+
+* iOS 10.0 or above
+* Familiarity with [CocoaPods](https://cocoapods.org/)
+
+## Installation
+
+1. Get the [LoginKit](https://cocoapods.org/pods/LoginKit) library from CocoaPods.
+
+2. Install LoginKit by adding this line to your Podfile:
+
+    ```ruby
+    pod 'FidoClientIOS'
+    ```
+
+## Getting started
+
+All calls go through the `FidoClient` class. Instantiate it, then register the client:
+
+```swift
+try FidoClient().register(aaid: aaid, BiometricsAssertionScheme: BiometricsAssertionScheme, accessToken: accessToken, registrationUrl: registrationUrl, privateKeyLabel: privateKeyLabel, registrationResponseEndpoint: registrationResponseEndpoint)
 ```
 
-## Cocoapods
+When the user has registered, they can log in to your application using any of the biometric identifiers linked to their device.
 
-To update the cocoapod a number of steps need to be taken
+To log in, call the authentication endpoint:
 
-1. Make sure you have cocoapods on your machine:
-        sudo gem install cocoapods
-2.  Make the changes to the source code
-3.  Check the current tag version in gitlab
-4.  Update the podspec file with the next incremental spec.version based on the tag
-5.  Push the podspec:
-        pod repo push FidoClientIOS FidoClientIOS.podspec
-6. Check in the nhsonline-fide-client-ios-cocopod git repo that the correct cocoapod has been created under the FidoClientIOS folder
+```swift
+try FidoClient().completeAuthorisationRequestAndRetrieveBase64Response(aaid: aaid, BiometricsAssertionScheme: BiometricsAssertionScheme, privateKeyLabel: privateKeyLabel, authenticationUrl: authenticationUrl)
+```
+
+From this point, they're logged in and you can redirect using the base64 response.
+
+If the user no longer wants to use biometrics to log in, you can deregister them:
+
+```swift
+UserDefaultsManager.setBiometricState(nil)
+try FidoClient().doDeregistration(aaid: aaid, privateKeyLabel: privateKeyLabel, deregistrationRequestEndpoint: deregistrationRequestEndpoint)
+```
+
+### Error handling
+
+`FidoClient` throws the following errors:
+
+```swift
+case invalidBiometrics
+case genericError
+case parsingError
+case encryptionError
+case networkRequestError
+case keyRetrievalError
+case accessTokenError
+```
+
+## Contribute
+
+We appreciate contributions and there are several ways you can help. For more information, see our [contributing guidelines](/CONTRIBUTING.md).
+
+## Get in touch
+
+The FIDO UAF (Universal Authentication Framework) client for iOS is maintained by NHS Digital. [Email us](mailto:nhsapp@nhs.net) or open a GitHub issue.
+
+## License
+
+The codebase is released under the MIT License, unless stated otherwise. This covers both the codebase and any sample code in the documentation.
