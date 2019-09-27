@@ -69,7 +69,7 @@ We appreciate contributions and there are several ways you can help. For more in
 
 ## Get in touch
 
-The FIDO UAF (Universal Authentication Framework) client for iOS is maintained by NHS Digital. [Email us](mailto:nhsapp@nhs.net) or open a GitHub issue.
+The FIDO UAF (Universal Authentication Framework) client for iOS is maintained by NHS Digital. [Email us](mailto:nhsapp@nhs.net) or open a [GitHub issue](https://github.com/nhsconnect/nhsapp-fido-client-ios/issues/new).
 
 ### Reporting vulnerabilities
 
