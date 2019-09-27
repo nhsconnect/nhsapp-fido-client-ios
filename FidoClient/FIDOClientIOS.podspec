@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
   spec.name         = "FidoClientIOS"
   spec.version      = "1.0.0"
   spec.summary      = "This is the NHS digital Fido Client"
-  spec.homepage     = "https://git.nhschoices.net/nhsonline/nhsonline-fido-client-ios"
+  spec.homepage     = "https://github.com/nhsconnect/nhsapp-fido-client-ios"
   spec.license      = { :type => 'MIT', :text => <<-LICENSE
         MIT License
 
@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
   }
   spec.author        = "NHS Digital"
   spec.platform      = :ios, "9.0"
-  spec.source        = { :git => "https://git.nhschoices.net/nhsonline/nhsonline-fido-client-ios.git", :tag => "#{spec.version}" }
+  spec.source        = { :git => "https://github.com/nhsconnect/nhsapp-fido-client-ios.git", :tag => "#{spec.version}" }
   spec.source_files  = "FidoClient/**/*.swift"
   spec.exclude_files = ["FIDOClient/Exclude", "FIDOClient/FIDOClientTests/"]
   spec.swift_version = "5.0"
